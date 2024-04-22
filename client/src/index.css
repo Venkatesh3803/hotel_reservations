@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero-btn {
+    position: relative;
+    transition: 0.s ease;
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.hero-btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    bottom: -43px;
+    left: 0;
+    transition: 0.3s ease;
+
+}
+
+.hero-btn:hover::after {
+    content: "Explore Rooms";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    color: gray;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.swiper{
+    height: 92vh;
+    position: relative;
+}
