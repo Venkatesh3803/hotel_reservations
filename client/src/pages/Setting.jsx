@@ -27,8 +27,9 @@ const Setting = () => {
         try {
             const res = await apiRequest.patch(`/user/${currUser._id}`, data)
             if (res.data) {
-                navigate(`/profile/${currUser._id}`)
                 updateUser(res.data)
+                toast.success("Update Sucessful")
+                navigate(`/profile/${currUser._id}`)
             }
         } catch (error) {
             console.log(error.response.data);

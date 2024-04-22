@@ -121,7 +121,7 @@ const Navber = () => {
                                                     </Link>
                                                 )}
                                             </Menu.Item>
-                                            {currUser.gender === "Female" &&
+                                            {currUser?.gender === "Female" &&
                                                 <Menu.Item>
                                                     {({ active }) => (
                                                         <Link to={"/addroom"}

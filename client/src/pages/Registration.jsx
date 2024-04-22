@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import apiRequest from "../lib/RequestMethods";
+import { toast } from "react-toastify";
 
 const Registration = () => {
     const [inputs, setInputs] = useState({});
@@ -21,6 +22,7 @@ const Registration = () => {
 
             const res = await apiRequest.post("/auth/register", inputs)
             if (res.data) {
+                toast.success("Registration Sucessful")
                 navigate("/login")
             }
         } catch (error) {

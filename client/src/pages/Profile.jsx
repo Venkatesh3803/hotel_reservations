@@ -119,7 +119,6 @@ const Profile = () => {
                     </div>
                 </section>
             </main>
-            <RoomsList />
         </div>
     )
 }

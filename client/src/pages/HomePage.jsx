@@ -10,7 +10,6 @@ const HomePage = () => {
         <div>
             <Hero />
             <RoomsList />
-            <Features />
             <NewsLetter />
             <Category />
         </div>

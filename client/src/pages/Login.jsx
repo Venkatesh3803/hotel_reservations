@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom"
 import { AuthContext } from "../ContextApi/AuthContext";
 import apiRequest from "../lib/RequestMethods";
+import { toast } from "react-toastify"
 
 const Login = () => {
     const [inputs, setInputs] = useState({});
@@ -23,6 +24,7 @@ const Login = () => {
             const res = await apiRequest.post("/auth/login", inputs)
             if (res.data) {
                 updateUser(res.data)
+                toast.success("Login Sucessful")
                 navigate("/")
             }
         } catch (error) {
